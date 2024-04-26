@@ -35,6 +35,16 @@ public class Employee {
     @Column(length = 100, nullable = false,columnDefinition = "varchar(255) default 'No Value'")
     private String phoneNumber;
 
+    @Column(length = 100, nullable = false,columnDefinition = "varchar(255) default 'No Value'")
+    private String Schedule = "No Schedule";
+
+    @Column(length = 100, nullable = false,columnDefinition = "varchar(255) default 'No Value'")
+    private String contractHours;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 100)
+    private Enum<Area> area;
+
     @CreationTimestamp
     private LocalDateTime created;
 
