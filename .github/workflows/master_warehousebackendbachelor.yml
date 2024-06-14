@@ -31,7 +31,7 @@ jobs:
       #- name: Grant execute permission for gradlew
       #  run: chmod +x ./gradlew
 
-      - name: Run build
+      - name: build
         run: gradel build #-x test
 
       - name: Upload artifact for deployment job
