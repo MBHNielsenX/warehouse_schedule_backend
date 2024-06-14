@@ -5,8 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.security.core.GrantedAuthority;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 
 @Getter
@@ -68,6 +70,10 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.contractHours = contractHours;
         this.area = area;
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
     }
 
     /*
